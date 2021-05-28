@@ -1,28 +1,6 @@
 <?php
 include "connProperties.php";
 
-//function sanitize_my_email($field) {
-//    $field = filter_var($field, FILTER_SANITIZE_EMAIL);
-//    if (filter_var($field, FILTER_VALIDATE_EMAIL)) {
-//        return true;
-//    } else {
-//        return false;
-//    }
-//}
-//
-//$to_email = $_POST['email'];
-//$name = $_POST['name'];
-//$message = $_POST['message'];
-//$subject = 'Testing PHP Mail';
-//$headers = 'From: testing@myNew_Appisdebest.com';
-//
-//$secure_check = sanitize_my_email($to_email);
-//if ($secure_check == false) {
-//    echo "Invalid input";
-//} else { //send email
-//    mail($to_email, $subject, $message, $headers);
-//    echo "This email is sent using PHP Mail";
-//}
 session_start();
 $x = 0;
 $result1 = 0;
@@ -72,6 +50,7 @@ if (isset($_SESSION['username'])) {
         }
 }
 ?>
+<!doctype html>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
@@ -144,63 +123,58 @@ if (isset($_SESSION['username'])) {
             </div>
         </header>
 
-        <!-- Content -->
-        <section id="footer">
-            <div class="inner">
-                <h2 class="major"></h2>
-                <p>Welcome to your new agreement. You're almost there.</p>
-                <form method="post" action="paymentPage.php">
-                    <div class="fields">
-                        <div class="field">
-                            <p><strong>PROPERTY</strong></p>
-                            <p><?php echo $property_address?></p>
-                            <img src="../RentalBuddy/images/<?php echo $image_name?>" alt="<?php echo $property_address?>" width="700" height="600">
+        <div class="container">
+            <div class="grid">
+                <div class="col-1">
+                    <div class="flex item justify-content-between">
+                        <div class="flex">
+                            <div class="img text-center">
+                                <img src="./assets/pro1.png" alt="">
+                            </div>
+                            <div class="title">
+                                <h3><?php echo $property_address?></h3>
+                                <span>Electronics</span>
+                                <div class="buttons">
+                                    <button type="submit"><i class="fas fa-chevron-up"></i> </button>
+                                    <input type="text" class="font-title" value="1">
+                                    <button type="submit"><i class="fas fa-chevron-down"></i> </button>
+                                </div>
+                                <a href="#">Save for later</a> |
+                                <a href="#">Delete From Cart</a>
+                            </div>
                         </div>
-                        <div class="field">
-                            <p><strong>FULL NAME</strong></p>
-                            <?php echo $fullname ?>
-                        </div>
-                        <div class="field">
-                            <p><strong>AGREED PRICE PER MONTH</strong></p>
-                            <?php echo "${price} pounds per month."?>
-                        </div>
-                        <div class="field">
-                            <p><strong>BREAK CLAUSE</strong></p>
-                            <?php echo $break_clause?>
-                        </div>
-                        <div class="field">
-                            <p><strong>LEASE</strong></p>
-                            <?php echo $lease ?>
-                        </div>
-                        <div class="field">
-                            <p><strong>YOUR NEW LANDLORD WILL BE</strong></p>
-                            <?php echo $landlord_fullname ?>
-                        </div>
-                        <div class="field">
-                            <p><strong>LANDLORDS PHONE</strong></p>
-                            <?php echo $landlord_phoneNumber ?>
-                        </div>
-                        <div class="field">
-                            <p><strong>LANDLORDS EMAIL</strong></p>
-                            <?php echo $landlord_email ?>
+                        <div class="price">
+                            <h4 class="text-red">$349</h4>
                         </div>
                     </div>
-                    <ul class="actions">
-                        <li><input type="submit" value="SUBMIT" onclick="doSubmit()" /></li>
-                    </ul>
-                </form>
-
-
+                </div>
+                <div class="col-2">
+                    <div class="subtotal text-center">
+                        <h3>Price Details</h3>
+                        <ul>
+                            <li class="flex justify-content-between">
+                                <label for="price">Products ( 3 items ) : </label>
+                                <span>$399</span>
+                            </li>
+                            <li class="flex justify-content-between">
+                                <label for="price">Delivery Charges : </label>
+                                <span>Free</span>
+                            </li>
+                            <hr>
+                            <li class="flex justify-content-between">
+                                <label for="price">Amout Payble : </label>
+                                <span class="text-red font-title">$399</span>
+                            </li>
+                        </ul>
+                        <div id="paypal-payment-button">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+      </div>
     </div>
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-</div>
+    <script src="https://www.paypal.com/sdk/js?client-id=AaoynwokdocJmBajc1MdrQutu-gaXgsdDMg5_Nnby-XEkJxD3PG4qTGx6H-REZWsSQtw2beTkwzgWp3Z&disable-funding=credit,card"></script>
+    <script src="index.js"></script>
 </body>
 </html>

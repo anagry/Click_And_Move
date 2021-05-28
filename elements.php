@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Maintenance</title>
+		<title>Contact</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="index.php">Maintenance</a></h1>
+						<h1><a href="index.php">Home</a></h1>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -31,7 +31,7 @@
 						<h2>Menu</h2>
 						<ul class="links">
 							<li><a href="index.php">Home</a></li>
-							<li><a href="elements.php">Maintenance</a></li>
+							<li><a href="elements.php">Contact</a></li>
 							<li><a href="faq.html">FAQ</a></li>
 							<?php if (!isset($_SESSION['username'])){ ?>
 							<li><a href="loginPage.php">Sign Up - Log In</a></li>
@@ -50,15 +50,15 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Maintenance</h2>
+								<h2>Contact</h2>
 								<p>You can use this to send messages to the party in the tenancy.</p>
 							</div>
 						</header>
 					</section>
 
 						<!-- Content -->
-							
-									
+
+
 
 				<!-- Footer -->
 					<section id="footer">
@@ -86,7 +86,7 @@
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
-							
+
 						</div>
 					</section>
 

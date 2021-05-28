@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Rent-A-Home</title>
+    <title>Click And Move</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -19,7 +19,7 @@ session_start();
 
     <!-- Header -->
     <header id="header">
-        <h1><a href="index.php">Rent-A-Home</a></h1>
+        <h1><a href="index.php">Click And Move</a></h1>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -32,7 +32,7 @@ session_start();
             <ul class="links">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="agreement.php">Agreement</a></li>
-                <li><a href="elements.php">Maintenance</a></li>
+                <li><a href="elements.php">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <?php if (!isset($_SESSION['username'])){ ?>
                     <li><a href="loginPage.php">Sign Up - Log In</a></li>

@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE HTML>
 <!--
 	Solid State by HTML5 UP
@@ -11,7 +8,19 @@ session_start();
 <head>
     <script langue="JavaScript" type="text/javascript">
         function doSubmit(form){
-            window.location.href("agreement_form.html")
+            window.location.href("thankyouSignUp.php")
+        }
+        var check = function() {
+            if (document.getElementById('password').value ==
+                document.getElementById('confirm_password').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'Matching';
+                document.getElementById('subbut').disabled = false;
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Not Matching';
+                document.getElementById('subbut').disabled = true;
+            }
         }
     </script>
     <title>Click And Move</title>
@@ -58,7 +67,7 @@ session_start();
     <div id="wrapper">
         <header>
             <div class="inner">
-                <h2>Agreements</h2>
+                <h2>Sign Up</h2>
                 <p>Please fill out the information fields. </p>
             </div>
         </header>
@@ -68,44 +77,56 @@ session_start();
             <div class="inner">
                 <h2 class="major"></h2>
                 <p>Please make sure the information you enter is accurate.</p>
-                <form method="post" action="agreement_page.php">
+                <form method="post" action="thankyouSignUp.php">
                     <div class="fields">
                         <div class="field">
-                            <label for="name">Name of the tenants*</label>
-                            <input type="text" name="name" id="name" required/>
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" required/>
+                        </div>
+                        <div class="field">
+                            <label for="fname">First Name</label>
+                            <input type="text" name="fname" id="fname" required/>
+                        </div>
+                        <div class="field">
+                            <label for="lname">Last Name</label>
+                            <input type="text" name="lname" id="lname" required/>
                         </div>
                         <div class="field">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" required/>
                         </div>
                         <div class="field">
-                            <label for="numberoftenants">Number of tenants moving in*</label>
-                            <select id="noadult" required>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                            </select>
+                            <label for="address">Address</label>
+                            <input type="text" name="address" id="address" required/>
                         </div>
                         <div class="field">
-                            <label for="movedate">Move in date*</label>
-                            <input type="date" name="moveemail" id="movedate" required/>
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="text" name="phoneNumber" id="phoneNumber" pattern="[0-9]{10}" required/>
                         </div>
                         <div class="field">
-                            <label for="6month">would you like to add a six month clause*</label>
-                            <input type="radio" id="Yes" name="break" value="Yes">
-                            <label for="Yes">Yes</label>
-                            <input type="radio" id="No" name="break" value="no">
-                            <label for="no">No</label>
+                            <label for="role">I am a</label>
+                            <input type="radio" id="role" name="break" value="tenant">
+                            <label for="tenant">Tenant</label>
+                            <input type="radio" id="role" name="break" value="landlord">
+                            <label for="landlord">Landlord</label>
                         </div>
                         <div class="field">
-                            <label for="message">Message*</label>
-                            <textarea name="message" id="message" rows="4"></textarea>
+                            <label>Choose a Password :
+                                <input name="password" id="password" type="password" onkeyup='check();'  required/>
+                            </label>
+                            <br>
+                            <label>Confirm Password:
+                                <input type="password" name="confirm_password" id="confirm_password"  onkeyup='check();' required/>
+                                <span id='message'></span>
+                            </label>
                         </div>
                         <div class="field">
-                            <input type="checkbox" id="accept" name="accept">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" required>
                         </div>
                     </div>
                     <ul class="actions">
-                        <li><input type="submit" value="SUBMIT" onclick="doSubmit()" /></li>
+                        <li><input type="submit" value="SUBMIT" id="subbut" onclick="doSubmit()" /></li>
                     </ul>
                 </form>
 
