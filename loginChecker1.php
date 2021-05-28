@@ -15,20 +15,14 @@ if (isset($_POST['username']) && isset($_POST['password']) &&
     }
         $username = test_input($_POST['username']);
         $password = test_input($_POST['password']);
-        $user_type = $_POST['break'];
-        $user_type = $_POST["break"];
-        if ($user_type == "tenant"){
-            $user_type = 0;
-        }else{
-            $user_type = 1;
-        }
+        $user_type = test_input($_POST['break']);
 
         if (empty($username)) {
             echo "Username must be provided";
         } else if (empty($password)) {
             echo "Password must be provided";
         } else {
-            $sql = "select * from user_login_info where username = '$username' and password = '$password' and user_type = '$user_type'";
+            $sql = "select * from user_login_info where username = '$username' and password = '$password'";
             //$password = md5($password);
             //echo $password;
             //$sql = "select * from user_login_info where username = '$username' and password = '$password'";
@@ -52,3 +46,4 @@ if (isset($_POST['username']) && isset($_POST['password']) &&
 }else{
     header("Location: ../index.php");
 }
+

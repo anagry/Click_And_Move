@@ -1,187 +1,119 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+    <script langue="JavaScript" type="text/javascript">
+        function doSubmit(form){
+            window.location.href("thankyouSignUp.php")
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        /* style the container */
-        .container {
-            position: relative;
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px 0 30px 0;
-        }
-
-        /* style inputs and link buttons */
-        input,
-        .btn {
-            width: 100%;
-            padding: 12px;
-            border: none;
-            border-radius: 4px;
-            margin: 5px 0;
-            opacity: 0.85;
-            display: inline-block;
-            font-size: 17px;
-            line-height: 20px;
-            text-decoration: none; /* remove underline from anchors */
-        }
-
-        input:hover,
-        .btn:hover {
-            opacity: 1;
-        }
-
-        /* add appropriate colors to fb, twitter and google buttons */
-        .fb {
-            background-color: #3B5998;
-            color: white;
-        }
-
-        .twitter {
-            background-color: #55ACEE;
-            color: white;
-        }
-
-        .google {
-            background-color: #dd4b39;
-            color: white;
-        }
-
-        /* style the submit button */
-        input[type=submit] {
-            background-color: #04AA6D;
-            color: white;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        /* Two-column layout */
-        .col {
-            float: left;
-            width: 50%;
-            margin: auto;
-            padding: 0 50px;
-            margin-top: 6px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* vertical line */
-        .vl {
-            position: absolute;
-            left: 50%;
-            transform: translate(-50%);
-            border: 2px solid #ddd;
-            height: 175px;
-        }
-
-        /* text inside the vertical line */
-        .vl-innertext {
-            position: absolute;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #f1f1f1;
-            border: 1px solid #ccc;
-            border-radius: 50%;
-            padding: 8px 10px;
-        }
-
-        /* hide some text on medium and large screens */
-        .hide-md-lg {
-            display: none;
-        }
-
-        /* bottom container */
-        .bottom-container {
-            text-align: center;
-            background-color: #666;
-            border-radius: 0px 0px 4px 4px;
-        }
-
-        /* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
-        @media screen and (max-width: 650px) {
-            .col {
-                width: 100%;
-                margin-top: 0;
-            }
-            /* hide the vertical line */
-            .vl {
-                display: none;
-            }
-            /* show the hidden text on small screens */
-            .hide-md-lg {
-                display: block;
-                text-align: center;
+        var check = function() {
+            if (document.getElementById('password').value ==
+                document.getElementById('confirm_password').value) {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').innerHTML = 'Matching';
+                document.getElementById('subbut').disabled = false;
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').innerHTML = 'Not Matching';
+                document.getElementById('subbut').disabled = true;
             }
         }
-    </style>
+    </script>
+    <title>Click And Move</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
+<body class="is-preload">
 
-<h2>Rental Buddy Members Area</h2>
+<!-- Page Wrapper -->
+<div id="page-wrapper">
 
-<div class="container">
-    <form action="loginChecker.php" method="post">
-        <div class="row">
-            <h2 style="text-align:center">Login with Social Media or Manually</h2>
-            <div class="vl">
-                <span class="vl-innertext">or</span>
-            </div>
+    <!-- Header -->
+    <header id="header">
+        <h1><a href="index.php">Click And Move</h1>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
 
-            <div class="col">
-                <a href="https://www.facebook.com" class="fb btn">
-                    <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-                </a>
-                <a href="https://www.twitter.com" class="twitter btn">
-                    <i class="fa fa-twitter fa-fw"></i> Login with Twitter
-                </a>
-                <a href="https://www.gmail.com" class="google btn"><i class="fa fa-google fa-fw">
-                    </i> Login with Google+
-                </a>
-            </div>
-
-            <div class="col">
-                <div class="hide-md-lg">
-                    <p>Or sign in manually:</p>
-                </div>
-
-                <input type="text" name="username" placeholder="Username" >
-                <input type="password" name="password" placeholder="Password" >
-                <input type="text" name="break" placeholder="Role">
-                <input type="submit" value="Login">
-            </div>
-
+    <!-- Menu -->
+    <nav id="menu">
+        <div class="inner">
+            <h2>Menu</h2>
+            <ul class="links">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="elements.php">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <?php if (!isset($_SESSION['username'])){ ?>
+                    <li><a href="loginPage.php">Sign Up - Log In</a></li>
+                <?php } ?>
+                <?php if (isset($_SESSION['username'])){ ?>
+                    <li><a href="home.php">My Account</a></li>
+                    <li><a href="agreement.php">Agreement</a></li>
+                    <li><a href="logout.php">Logout</a></li>
+                <?php } ?>
+            </ul>
+            <a href="#" class="close">Close</a>
         </div>
-    </form>
-</div>
+    </nav>
 
-<div class="bottom-container">
-    <div class="row">
-        <div class="col">
-            <a href="signUp.php" style="color:white" class="btn">Sign up</a>
-        </div>
-        <div class="col">
-            <a href="#" style="color:white" class="btn">Forgot password?</a>
-        </div>
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <header>
+            <div class="inner">
+                <h2>Login Area</h2>
+                <p>Please fill out the information fields. </p>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <section id="footer">
+            <div class="inner">
+                <h2 class="major"></h2>
+                <p>Please make sure the information you enter is accurate.</p>
+                <form method="post" action="loginCheckerTest.php">
+                    <div class="fields">
+                        <div class="field">
+                            <label for="username">Please type your username :
+                                <input type="text" name="username" id="username" required/>
+                            </label>
+                        </div>
+                        <div class="field">
+                            <label>Please type your password :
+                                <input name="password" id="password" type="password" required/>
+                            </label>
+                            <br>
+                        </div>
+                        <div class="field">
+                            <label for="role">Please select your role :</label>
+                            <input type="radio" id="role" name="break" value="tenant">
+                            <label for="tenant">Tenant</label>
+                            <input type="radio" id="role" name="break" value="landlord">
+                            <label for="landlord">Landlord</label>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="SUBMIT" id="subbut" onclick="doSubmit()" /></li>
+                    </ul>
+                </form>
+
+
+            </div>
+        </section>
     </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </div>
-
 </body>
 </html>

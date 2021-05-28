@@ -29,7 +29,7 @@ session_start();
             <h2>Menu</h2>
             <ul class="links">
                 <li><a href="index.php">Home</a></li>
-                <li><a href="elements.php">Maintenance</a></li>
+                <li><a href="elements.php">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <?php if (!isset($_SESSION['username'])){ ?>
                     <li><a href="loginPage.php">Sign Up - Log In</a></li>

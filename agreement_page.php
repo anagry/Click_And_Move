@@ -87,7 +87,7 @@ if (isset($_SESSION['username'])) {
          element. parentNode. removeChild(element);
     }
   </script>
-  <title>Rent-A-Home</title>
+  <title>Click And Move</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
@@ -100,7 +100,7 @@ if (isset($_SESSION['username'])) {
 
   <!-- Header -->
   <header id="header">
-    <h1><a href="index.php">Rent-A-Home</a></h1>
+    <h1><a href="index.php">Click And Move</a></h1>
     <nav>
       <a href="#menu">Menu</a>
     </nav>
@@ -113,7 +113,7 @@ if (isset($_SESSION['username'])) {
             <ul class="links">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="agreement.php">Agreement</a></li>
-                <li><a href="elements.php">Maintenance</a></li>
+                <li><a href="elements.php">Contact</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <?php if (!isset($_SESSION['username'])){ ?>
                     <li><a href="loginPage.php">Sign Up - Log In</a></li>
