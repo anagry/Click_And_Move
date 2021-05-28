@@ -77,7 +77,7 @@
             <div class="inner">
                 <h2 class="major"></h2>
                 <p>Please make sure the information you enter is accurate.</p>
-                <form method="post" action="loginCheckerTest.php">
+                <form method="post" action="loginChecker.php">
                     <div class="fields">
                         <div class="field">
                             <label for="username">Please type your username :
