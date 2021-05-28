@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Rent-A-Home</title>
+    <title>Click And Move</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@ session_start();
 
     <!-- Header -->
     <header id="header" class="alt">
-        <h1><a href="index.php">Rent-A-Home</a></h1>
+        <h1><a href="index.php">Click And Move</a></h1>
         <nav>
             <a href="#menu">Menu</a>
         </nav>
@@ -48,7 +48,7 @@ session_start();
     <section id="banner">
         <div class="inner">
             <div class="logo"><span class="icon fa-gem"></span></div>
-            <h2>Rent-A-Home</h2>
+            <h2>Click And Move</h2>
             <p>We are here to put you in your new home.</a></p>
         </div>
     </section>
@@ -59,7 +59,7 @@ session_start();
         <!-- One -->
         <section id="one" class="wrapper spotlight style1">
             <div class="inner">
-                <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+                <a href="#" class="image"><img src="images/pic01.JPG" alt="" /></a>
                 <div class="content">
                     <h2 class="major">What is this website all about</h2>
                     <p>The purpose of this website is to make it easy for both the Landlord and the tenant to sign off on their new house.</p>
@@ -71,7 +71,7 @@ session_start();
         <!-- Two -->
         <section id="two" class="wrapper alt spotlight style2">
             <div class="inner">
-                <a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+                <a href="#" class="image"><img src="images/pic02.JPG" alt="" /></a>
                 <div class="content">
                     <h2 class="major">What does this website has to offer</h2>
                     <p>This website allows the landlord to make a tenency agreement for the tenants which they can request any changes to
